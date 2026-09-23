@@ -5,21 +5,11 @@ const Navbar = () => {
       <nav className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-5 px-8">
         <a
           href="#"
-          className="flex items-center gap-2.5 font-display text-xl font-bold text-ink"
+          className="flex items-center gap-2.5 font-display text-5xl font-bold text-racing-yellow
+           font-pirata"
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-racing-yellow ">
-            <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
-              <circle cx="6" cy="6" r="2.5" stroke="#0A0A0C" strokeWidth="1.6" />
-              <circle cx="6" cy="18" r="2.5" stroke="#0A0A0C" strokeWidth="1.6" />
-              <path
-                d="M8 7.5L20 18M20 6L8 16.5"
-                stroke="#0A0A0C"
-                strokeWidth="1.6"
-                strokeLinecap="round"
-              />
-            </svg>
-          </span>
-          Sergio H.
+          
+          Chess.
         </a>
 
         <div className="ml-auto hidden gap-9 text-[15px] text-ink-muted md:flex">
