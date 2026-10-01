@@ -6,19 +6,19 @@ const services = [
     icon: GiScissors,
     label: "Corte",
     // TODO: reemplazar por foto real de Checho cortando
-    image: "/img/classic.jpg",
+    image: "/img/corte-fade-2.webp",
   },
   {
     icon: GiBeard,
     label: "Diseño de barba",
     // TODO: reemplazar por foto real
-    image: "/img/senior.jpg",
+    image: "/img/corte-perfil-1.webp",
   },
   {
     icon: GiRazorBlade,
     label: "Afeitado tradicional",
     // TODO: reemplazar por foto real
-    image: "/img/relax.jpg",
+    image: "/img/corte-trenzas-1.webp",
   },
 ];
 

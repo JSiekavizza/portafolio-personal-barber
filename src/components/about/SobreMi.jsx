@@ -18,8 +18,8 @@ const SobreMi = () => {
   return (
     <section id="sobre-mi" className="relative overflow-hidden bg-base px-8 py-28">
       <img
-        src="/img/tools2.jpg"
-        alt=""
+        src="/img/estacion-tijeras-1.webp"
+        alt="banner"
         className="absolute inset-0 h-full w-full object-cover object-center"
       />
 

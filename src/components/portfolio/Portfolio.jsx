@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 // Destacados mezclados a propósito (no organizados por categoría) —
 // esa organización ya vive en Servicios; aquí es solo prueba visual.
 const highlights = [
-  { id: 1, image: "https://picsum.photos/seed/checho-work-1/600/750" },
-  { id: 2, image: "https://picsum.photos/seed/checho-work-2/600/750" },
-  { id: 3, image: "https://picsum.photos/seed/checho-work-3/600/750" },
-  { id: 4, image: "https://picsum.photos/seed/checho-work-4/600/750" },
-  { id: 5, image: "https://picsum.photos/seed/checho-work-5/600/750" },
-  { id: 6, image: "https://picsum.photos/seed/checho-work-6/600/750" },
+  { id: 1, image: "/img/corte-fade-1.webp" },
+  { id: 2, image: "/img/corte-afro-2.webp" },
+  { id: 3, image: "/img/corte-kid-2.webp" },
+  { id: 4, image: "/img/corte-nuca-3.webp" },
+  { id: 5, image: "/img/corte-fade-4.webp" },
+  { id: 6, image: "/img/corte-trenzas-1.webp" },
 ];
 
 const fadeUp = {

@@ -7,6 +7,8 @@ import StatsBar from "../components/stats/StatsBar.jsx";
 import Portfolio from "../components/portfolio/Portfolio.jsx";
 import CtaBanner from "../components/cta/CtaBanner.jsx";
 import Contacto from "../components/contact/Contacto.jsx"
+import NicknameMosaic from "../components/brand/NicknameMosaic.jsx"
+
 
 const Home = () => {
   return (
@@ -14,6 +16,7 @@ const Home = () => {
       <FixedBackground />
       <GrainOverlay />
       <div className="relative z-10">
+        <NicknameMosaic />
         <div className= "relative z-10">
           <Header />
         </div>

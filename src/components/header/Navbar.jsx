@@ -5,13 +5,22 @@ const Navbar = () => {
       <nav className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-5 px-8">
         <a
           href="#"
-          className="flex items-center gap-2.5 font-display text-5xl font-bold text-racing-yellow
-           font-pirata"
+          className="flex items-center gap-2.5 font-display text-2xl font-bold text-racing-yellow"
         >
-          
-          Chess.
+          <span className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-racing-yellow">
+            <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4">
+              <circle cx="6" cy="6" r="2.5" stroke="#F7B715" strokeWidth="1.6" />
+              <circle cx="6" cy="18" r="2.5" stroke="#F7B715" strokeWidth="1.6" />
+              <path
+                d="M8 7.5L20 18M20 6L8 16.5"
+                stroke="#F7B715"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+              />
+            </svg>
+          </span>
+          Sergio H.
         </a>
-
         <div className="ml-auto hidden gap-9 text-[15px] text-ink-muted md:flex">
           <a href="#servicios" className="transition-colors hover:text-ink">
             Servicios

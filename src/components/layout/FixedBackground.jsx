@@ -1,6 +1,7 @@
 const FixedBackground = () => {
   return (
     <div className="fixed inset-0 z-0 overflow-hidden">
+      
       {/* imagen base, mezclada en luminosity para que el morado la tome */}
       <img
         src="/img/eje.jpg"

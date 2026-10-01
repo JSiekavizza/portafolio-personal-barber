@@ -5,7 +5,7 @@ const Nickname = () => {
       font-pirata text-6xl text-racing-yellow
        lg:right-60 lg:top-3 lg:z-auto lg:py-12 lg:text-8xl"
     >
-      CHESS
+      CHES
     </div>
   );
 };
