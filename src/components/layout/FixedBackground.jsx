@@ -4,10 +4,10 @@ const FixedBackground = () => {
       
       {/* imagen base, mezclada en luminosity para que el morado la tome */}
       <img
-        src="/img/eje.jpg"
+        src="/img/img1.webp"
         alt=""
         className="h-full w-full object-cover object-[center_20%] opacity-25 
-        mix-blend-luminosity"
+        mix-blend-luminosity scale-x-[-1]"
       />
 
       {/* negro sólido a la izquierda -> transparente a la derecha */}

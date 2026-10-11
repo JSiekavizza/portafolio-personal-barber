@@ -1,8 +1,13 @@
+import { useLanguage } from "../../context/LanguageContext.jsx";
+import LanguageSwitcher from "../ui/LanguageSwitcher.jsx";
+
 const Navbar = () => {
+  const { t } = useLanguage();
+
   return (
     <header className="sticky top-0 z-10 border-b border-racing-yellow/20 bg-base/60 
     backdrop-blur-md">
-      <nav className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-5 px-8">
+      <nav className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-3 px-4 sm:gap-5 sm:px-8">
         <a
           href="#"
           className="flex items-center gap-2.5 font-display text-2xl font-bold text-racing-yellow"
@@ -21,19 +26,19 @@ const Navbar = () => {
           </span>
           Sergio H.
         </a>
-        <div className="ml-auto hidden gap-9 text-[15px] text-ink-muted md:flex">
+        <div className="ml-auto hidden gap-6 text-[15px] text-ink-muted md:flex lg:gap-9">
           <a href="#servicios" className="transition-colors hover:text-ink">
-            Servicios
+            {t("nav.services")}
           </a>
           <a href="#sobre-mi" className="transition-colors hover:text-ink">
-            Sobre mí
+            {t("nav.about")}
           </a>
           <a href="#contacto" className="transition-colors hover:text-ink">
-            Contacto
+            {t("nav.contact")}
           </a>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3 sm:gap-4">
           <div className="hidden items-center gap-2 text-sm text-ink-muted lg:flex">
             <svg
               viewBox="0 0 24 24"
@@ -46,14 +51,18 @@ const Navbar = () => {
             </svg>
             <span>+57 300 000 0000</span>
           </div>
+
+          <LanguageSwitcher />
+
           <a
-            href="#contacto"
-            className="whitespace-nowrap rounded-full border-2 border-racing-yellow 
+            href="bruddasbarbershop.booksy.com/a"
+            target="_blank"
+            className="hidden whitespace-nowrap rounded-full border-2 border-racing-yellow 
             bg-black px-5 py-2.5 text-sm font-semibold text-ink 
              transition-shadow 
-            hover:shadow-[0_0_26px_rgba(247,183,21,0.6)]"
+            hover:shadow-[0_0_26px_rgba(247,183,21,0.6)] sm:inline-block"
           >
-            Asesoría
+            {t("nav.cta")}
           </a>
         </div>
       </nav>

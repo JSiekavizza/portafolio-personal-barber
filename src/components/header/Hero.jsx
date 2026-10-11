@@ -1,4 +1,8 @@
+import { useLanguage } from "../../context/LanguageContext.jsx";
+
 const Hero = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative flex max-h-screen items-center overflow-hidden px-8 py-32">
       <div className="mx-auto w-full max-w-6xl">
@@ -9,20 +13,18 @@ const Hero = () => {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-neon-green opacity-75"></span>
               <span className="relative inline-flex h-2 w-2 rounded-full bg-neon-green"></span>
             </span>
-            Bruddas Barber Shop · Orlando / Florida
+            {t("hero.kicker")}
           </p>
           <h1 className="mb-6 font-display text-[42px] font-bold leading-[1.05] tracking-tight text-ink sm:text-6xl lg:text-7xl">
-            Precisión clásica,
+            {t("hero.titleLine1")}
             <br />
             {/*39FF6A*/}
             <span className="bg-gradient-to-r from-racing-yellow to-racing-yellow bg-clip-text text-transparent">
-              actitud urbana.
+              {t("hero.titleAccent")}
             </span>
           </h1>
           <p className="mb-10 max-w-md text-lg text-ink-muted">
-            Cortes de precisión, barba con carácter y una asesoría honesta —
-            sin importar si vienes por un fade limpio o un afeitado a la
-            antigua.
+            {t("hero.description")}
           </p>
           <div className="flex justify-between">
             
@@ -31,15 +33,16 @@ const Hero = () => {
                 bg-racing-yellow transition-shadow shadow-[0_0_8px_rgba(247,183,21,0.6)] 
                 px-5 py-3 text-sm font-semibold text-black
                 sm:px-8 sm:py-4 sm:text-[15px]">
-                Agendar mi cita
+                {t("hero.ctaPrimary")}
               </button>
             
               <a
-                href="#servicios"
+                href="bruddasbarbershop.booksy.com/a"
+                target="_blank"
                 className="border-b border-ink-muted/30 pb-1 text-[15px] text-ink-muted 
                 transition-colors hover:border-ink hover:text-ink"
               >
-                Ver servicios
+                {t("hero.ctaSecondary")}
               </a>
             </div>
           </div>
@@ -70,11 +73,11 @@ const Hero = () => {
               <rect y="8" width="24" height="4" fill="#003893" />
               <rect y="12" width="24" height="4" fill="#CE1126" />
             </svg>
-            <span>Especialista en Corte Clásico</span>
+            <span>{t("hero.tagRole")}</span>
           </span>  
         </div>
         <span className="pl-[22px] text-[10.5px] text-ink-muted">
-          +7 años de experiencia
+          {t("hero.tagExperience")}
         </span>
       </div>
 

@@ -1,15 +1,16 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "../../context/LanguageContext.jsx";
 
 // TODO: reemplazar por fotos reales del trabajo de Checho.
 // Destacados mezclados a propósito (no organizados por categoría) —
 // esa organización ya vive en Servicios; aquí es solo prueba visual.
 const highlights = [
-  { id: 1, image: "/img/corte-fade-1.webp" },
-  { id: 2, image: "/img/corte-afro-2.webp" },
-  { id: 3, image: "/img/corte-kid-2.webp" },
-  { id: 4, image: "/img/corte-nuca-3.webp" },
-  { id: 5, image: "/img/corte-fade-4.webp" },
-  { id: 6, image: "/img/corte-trenzas-1.webp" },
+  { id: 1, image: "/img/bg.webp" },
+  { id: 2, image: "/img/bg3.webp" },
+  { id: 3, image: "/img/bg2.webp" },
+  { id: 4, image: "/img/corte-clasico.webp" },
+  { id: 5, image: "/img/corte-afro-2.webp" },
+  { id: 6, image: "/img/img1.webp" },
 ];
 
 const fadeUp = {
@@ -22,6 +23,8 @@ const fadeUp = {
 };
 
 const Portfolio = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="portafolio" className="relative overflow-hidden px-8 py-28">
       {/* segunda imagen de fondo, propia de esta sección */}
@@ -40,14 +43,14 @@ const Portfolio = () => {
         >
           <div>
             <p className="mb-4 flex items-center gap-2.5 text-sm font-medium text-gold before:h-px before:w-7 before:bg-gold before:content-['']">
-              Portafolio
+              {t("portfolio.kicker")}
             </p>
             <h2 className="max-w-md font-display text-[32px] font-bold leading-tight text-ink drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)] sm:text-[42px]">
-              Una muestra del trabajo, no una lista de precios.
+              {t("portfolio.title")}
             </h2>
           </div>
           <p className="max-w-xs text-[15px] text-ink-muted drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]">
-            Una selección del oficio en distintos estilos.
+            {t("portfolio.subtitle")}
           </p>
         </motion.div>
 
@@ -83,7 +86,7 @@ const Portfolio = () => {
             <a href="#"
             className="rounded-md border-2 border-racing-yellow px-8 py-3 text-sm font-semibold text-racing-yellow transition-colors hover:bg-racing-yellow hover:text-black"
           >
-            Ver portafolio completo
+            {t("portfolio.cta")}
           </a>
         </motion.div>
       </div>

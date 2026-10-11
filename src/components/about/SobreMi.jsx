@@ -2,8 +2,9 @@ import { motion } from "framer-motion";
 import AnimatedCounter from "./AnimatedCounter.jsx";
 
 import Nickname from "../brand/Nickname.jsx";
+import { useLanguage } from "../../context/LanguageContext.jsx";
 
-const values = ["Honestidad", "Confianza", "Escucha activa"];
+const valueKeys = ["honesty", "trust", "listening"];
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -15,11 +16,13 @@ const fadeUp = {
 };
 
 const SobreMi = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="sobre-mi" className="relative overflow-hidden bg-base px-8 py-28">
       <img
         src="/img/estacion-tijeras-1.webp"
-        alt="banner"
+        alt=""
         className="absolute inset-0 h-full w-full object-cover object-center"
       />
 
@@ -38,7 +41,7 @@ const SobreMi = () => {
             variants={fadeUp}
             className="mb-5 flex items-center gap-2.5 text-sm font-medium text-gold before:h-px before:w-7 before:bg-gold before:content-['']"
           >
-            Sobre mí
+            {t("about.kicker")}
           </motion.p>
 
           <motion.h2
@@ -49,11 +52,11 @@ const SobreMi = () => {
             variants={fadeUp}
             className="mb-6 font-display text-[32px] font-bold leading-tight text-ink sm:text-[42px]"
           >
-            Un oficio de precisión, una relación de{" "}
+            {t("about.titleBefore")}{" "}
             <span className="bg-gradient-to-r from-racing-yellow to-racing-yellow bg-clip-text text-transparent">
-              confianza
+              {t("about.titleAccent")}
             </span>
-            .
+            {t("about.titleAfter")}
           </motion.h2>
 
           <motion.p
@@ -64,11 +67,7 @@ const SobreMi = () => {
             variants={fadeUp}
             className="mb-8 max-w-lg text-[15px] leading-relaxed text-ink-muted"
           >
-            Con base en Orlando, Florida, mi trabajo parte de escuchar antes
-            de cortar. Cortes clásicos y modernos, diseño de barba y afeitado
-            tradicional con navaja — pero lo que de verdad marca la
-            diferencia es la honestidad: si algo no te va a quedar bien, te
-            lo digo antes de tocarte con la tijera.
+            {t("about.text")}
           </motion.p>
 
           <motion.div
@@ -79,12 +78,12 @@ const SobreMi = () => {
             variants={fadeUp}
             className="flex flex-wrap gap-3"
           >
-            {values.map((v) => (
+            {valueKeys.map((key) => (
               <span
-                key={v}
+                key={key}
                 className="rounded border border-ink/20 bg-ink/[0.06] px-4 py-2 text-[13px] font-medium text-ink backdrop-blur-md"
               >
-                {v}
+                {t(`about.values.${key}`)}
               </span>
             ))}
           </motion.div>
@@ -102,7 +101,7 @@ const SobreMi = () => {
           <AnimatedCounter to={7} suffix="+" />
           </div>
             <p className="mt-3 text-sm text-ink-muted">
-              años de experiencia en el oficio
+              {t("about.experienceLabel")}
             </p>
           </motion.div>
         </div>  

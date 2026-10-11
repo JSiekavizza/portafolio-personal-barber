@@ -9,8 +9,6 @@ const items = [
   { word: "FADE", top: "68%", side: "right", offset: "6%", size: "text-[150px]", rotate: "rotate-[-6deg]", color: "text-racing-dark" },
   { word: "CHES", top: "68%", side: "right", offset: "-6%", size: "text-9xl", rotate: "rotate-[-90deg]", color: "text-racing-yellow", visibility: "hidden lg:block" },
   { word: "CHES", top: "70%", side: "right", offset: "-14%", size: "text-9xl", rotate: "rotate-[-90deg]", color: "text-racing-yellow", visibility: "lg:hidden" },
-  { word: "CHES", top: "90%", side: "left", offset: "8%", size: "text-[190px]", color: "text-racing-dark" },
-  { word: "CHES", top: "90%", side: "left", offset: "9%", size: "text-[190px]", color: "text-racing-yellow" },
 
 ];
 

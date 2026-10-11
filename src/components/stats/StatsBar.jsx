@@ -1,19 +1,22 @@
 import { motion } from "framer-motion";
 import AnimatedCounter from "../about/AnimatedCounter.jsx";
+import { useLanguage } from "../../context/LanguageContext.jsx";
 
 const stats = [
-  { type: "static", value: "1 a 1", label: "Atención personalizada" },
-  { type: "counter", to: 500, suffix: "+", label: "Clientes atendidos" }, // TODO: número real
-  { type: "static", value: "5.0★", label: "Valoración de clientes" }, // TODO: rating real
+  { id: "personalized", type: "static", valueKey: "stats.personalizedValue", labelKey: "stats.personalized" },
+  { id: "clients", type: "counter", to: 500, suffix: "+", labelKey: "stats.clients" }, // TODO: número real
+  { id: "rating", type: "static", value: "5.0★", labelKey: "stats.rating" }, // TODO: rating real
 ];
 
 const StatsBar = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative border-y-2 border-black/80 bg-racing-yellow">
       <div className="mx-auto grid max-w-6xl grid-cols-3  sm:divide-x-2 sm:divide-black/15">
         {stats.map((s, i) => (
           <motion.div
-            key={s.label}
+            key={s.id}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
@@ -24,11 +27,11 @@ const StatsBar = () => {
               {s.type === "counter" ? (
                 <AnimatedCounter to={s.to} suffix={s.suffix} />
               ) : (
-                s.value
+                s.valueKey ? t(s.valueKey) : s.value
               )}
             </span>
             <span className="text-[11px] font-semibold uppercase tracking-wide text-black/70">
-              {s.label}
+              {t(s.labelKey)}
             </span>
           </motion.div>
         ))}

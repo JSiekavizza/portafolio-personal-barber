@@ -1,24 +1,25 @@
 import { motion } from "framer-motion";
 import { GiScissors, GiBeard, GiRazorBlade } from "react-icons/gi";
+import { useLanguage } from "../../context/LanguageContext.jsx";
 
 const services = [
   {
+    id: "cut",
     icon: GiScissors,
-    label: "Corte",
     // TODO: reemplazar por foto real de Checho cortando
-    image: "/img/corte-fade-2.webp",
+    image: "/img/corte-clasico.webp",
   },
   {
+    id: "beard",
     icon: GiBeard,
-    label: "Diseño de barba",
     // TODO: reemplazar por foto real
-    image: "/img/corte-perfil-1.webp",
+    image: "/img/diseño-barba.webp",
   },
   {
+    id: "kid",
     icon: GiRazorBlade,
-    label: "Afeitado tradicional",
     // TODO: reemplazar por foto real
-    image: "/img/corte-trenzas-1.webp",
+    image: "/img/corte-kid1.webp",
   },
 ];
 
@@ -32,6 +33,8 @@ const cardVariants = {
 };
 
 const Services = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="servicios" className="relative px-8 mb-12 ">
       <div className="mx-auto max-w-6xl">
@@ -39,9 +42,11 @@ const Services = () => {
 
         {/* 2 columnas en móvil, 3 en pantallas grandes */}
         <div className="grid grid-cols-2 gap-5 lg:grid-cols-3 lg:gap-6">
-          {services.map(({ icon: Icon, label, image }, i) => (
+          {services.map(({ id, icon: Icon, image }, i) => {
+            const label = t(`services.${id}`);
+            return (
             <motion.div
-              key={label}
+              key={id}
               custom={i}
               initial="hidden"
               whileInView="visible"
@@ -69,7 +74,8 @@ const Services = () => {
                 </span>
               </div>
             </motion.div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
