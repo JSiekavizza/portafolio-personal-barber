@@ -29,7 +29,10 @@ const Hero = () => {
           <div className="flex justify-between">
             
             <div className="flex items-center gap-7">
-              <button className="rounded-md 
+              <button 
+                href="bruddasbarbershop.booksy.com/a"
+                target="_blank"
+                className="rounded-md 
                 bg-racing-yellow transition-shadow shadow-[0_0_8px_rgba(247,183,21,0.6)] 
                 px-5 py-3 text-sm font-semibold text-black
                 sm:px-8 sm:py-4 sm:text-[15px]">
@@ -37,8 +40,7 @@ const Hero = () => {
               </button>
             
               <a
-                href="bruddasbarbershop.booksy.com/a"
-                target="_blank"
+                href="#servicios"
                 className="border-b border-ink-muted/30 pb-1 text-[15px] text-ink-muted 
                 transition-colors hover:border-ink hover:text-ink"
               >
